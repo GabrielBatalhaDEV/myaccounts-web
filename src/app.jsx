@@ -1,11 +1,16 @@
 import React from 'react'
 import './app.css'
-import { Container } from './components/accountsContainer'
+import { ListContainer } from './components/listAccounts/listContainer'
+import { PainelContainer } from './components/painel/painelContainer'
+
+
 
 function App(){
-    return(
-        <Container/>
-    )
+    return (
+    <div>
+        <ListContainer></ListContainer>
+        <PainelContainer></PainelContainer>
+    </div>)
 }
 
 export {App}

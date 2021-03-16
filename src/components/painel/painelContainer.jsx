@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function PainelContainer(props){
+function PainelContainer(){
+
+
+    const [search, setSearch] = useState(0)
     return (
         <div>
-            
-                <label htmlFor="search">Procurar conta pelo titulo</label>
+            <form>
+                <label htmlFor="">Procurar conta pelo titulo</label>
                 <input type="text" id="txtTitle" placeholder="League Of Legends"/>
-                <button id="btnBuscar" onClick={()=>{
-                    const txtTitle = document.getElementById('txtTitle').value
-                    props.evtSearch(txtTitle)
+                <button onClick={()=>{
+                    const value = document.getElementById('txtTitle').value
+                    alert(value)
                 }}>Buscar</button>
-            
+            </form>
         </div>
     )
 }
