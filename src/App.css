@@ -1,0 +1,18 @@
+
+body{
+    color: var(--color);
+    background-color: var(--color-background);
+}
+
+
+header{
+    text-align: center;
+}
+
+.button_header{
+    margin: 10px;
+    background: none;
+    border: none;
+    text-decoration: none;
+}
+

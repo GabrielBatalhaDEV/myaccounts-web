@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './app.css'
-import { Container } from './components/accountsContainer'
+import { AccountsContainer } from './pages/home/AccountsContainer'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect,
 
-function App(){
-    return(
-        <Container/>
+} from "react-router-dom";
+import { CreateAccountContainer } from './pages/create/CreateAccountContainer';
+
+
+
+
+function App() {
+
+    return (
+        <Router>
+            <Switch>
+                <Route path="/create" component={CreateAccountContainer}></Route>
+                <Route path="/" component={AccountsContainer}></Route>
+                
+            </Switch>
+
+        </Router>
     )
+    
 }
 
-export {App}
+export { App }

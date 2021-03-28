@@ -1,0 +1,12 @@
+:root{
+    --color-button: #55a630;
+    --color-button-letters: white;
+    --color-button-hover: #80b918;
+    --color-button-active: #aacc00;
+    --color-background: rgb(18, 18, 20);
+    --color: white;
+    --color-container:rgb(32, 32, 36);
+    --color-input-fill: #54565e;
+    --color-button-denied: #d90429;
+    --color-button-denied-hover: #ef233c;
+}

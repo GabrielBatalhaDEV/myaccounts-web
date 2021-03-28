@@ -1,0 +1,102 @@
+.account-card{
+    width: 300px;
+    min-height: 270px;
+    border-radius: 0px 20px;
+    margin: 30px;
+    overflow-y:initial;
+    background-color: var(--color-container)
+    ;
+    color: white;
+    position: relative;
+}
+
+.account-card__close{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.account-card__close_title{
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.account-card__close_underline{
+    border-bottom: 1px white solid;
+    width: 70%;
+    opacity: 0;
+}
+
+.account-card__close_id{
+    position: relative;
+    margin-top: 5px;
+    color: grey;
+    font-size: x-small;
+    float: left;
+    width: 70%;
+    opacity: 0;
+}
+
+.account-card__close:hover{
+    font-size: 110%;
+    transition: 1s;
+}
+
+.account-card__close:hover > .account-card__close_id{
+    animation: show-id-account-card__close 2s;
+    animation-fill-mode: both;
+}
+
+.account-card__close:hover > .account-card__close_underline{
+    animation: show-underline-account-card__close 2s;
+    animation-fill-mode: both;
+}
+
+.account-card__close:hover > h2{
+    animation: remove-bottom-account-card__close_title 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes remove-bottom-account-card__close_title{
+    100%{ margin-bottom: 0%;}
+}
+
+@keyframes show-id-account-card__close{
+    0% { left: 0;}
+    100%{ left: 30%;opacity: 1;}
+}
+
+@keyframes show-underline-account-card__close{
+    0% { width: 0%;}
+    100%{ width: 70%;opacity: 1;}
+}
+.account-card__open{
+    height: 100%;
+    text-align: center;
+}
+
+.account-card__open_header{
+    border-bottom: 1px white solid;
+    padding: 2px;
+}
+
+.account-card__open_body{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background-color: var(--color-background);
+    color: var(--color);
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: auto;
+}
+
+p{
+    overflow-wrap: break-word;
+}

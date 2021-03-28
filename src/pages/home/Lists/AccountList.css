@@ -1,0 +1,12 @@
+
+
+.AccountList__List{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.AccountList__Header{
+    text-align: center;
+    width: 100%;
+}
