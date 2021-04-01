@@ -1,0 +1,87 @@
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+input{
+    border-radius: 15px;
+    overflow: hidden;
+    outline: 0;
+    padding: 10px;
+    width: 60%;
+    background-color: var(--color-background);
+    margin: 10px;
+}
+
+input{
+    border-radius: 15px;
+    overflow: hidden;
+    outline: 0;
+    padding: 10px;
+    width: 60%;
+    background-color: black;
+    color: var(--color);
+}
+
+input:hover{
+    box-shadow: 0 0 3pt 2pt var(--color-button);
+}
+
+input:valid{
+    background-color: var(--color-input-fill);
+}
+
+input:focus{
+    box-shadow: 0 0 0pt 2pt var(--color-button);
+}
+
+.group-form{
+    text-align: center;
+}
+
+button, .btn-back{
+    padding: 7px 15px; 
+    color: var(--color-button-letters);
+    border: solid 3px black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn-save{
+    background-color: var(--color-button);
+}
+
+.btn-save:hover, .btn-save:focus{
+    outline: 0;
+    background-color: var(--color-button-hover);
+}
+
+
+
+.btn-save:active{
+    background: var(--color-button-active);
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;   
+}
+
+.btn-back{
+    background-color: var(--color-button-denied);
+}
+
+.btn-back:hover, .btn-back:focus{
+    background-color: var(--color-button-denied-hover);
+    outline: 0;
+}
+
+
+.buttons{
+    padding: 10px;
+}

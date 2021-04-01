@@ -1,10 +1,10 @@
 import React from 'react'
-import './CreateAccountForm.css'
-import {Form} from '../../../components/Form'
-import {Input} from '../../../components/Input'
+import { Form } from '../../components/Form'
+import { Input } from '../../components/Input'
+import './EditForm.css'
 
 
-function CreateAccountForm(){
+function EditForm(){
     return(
         <>
             <Form action="">
@@ -36,4 +36,4 @@ function CreateAccountForm(){
 }
 
 
-export {CreateAccountForm}
+export {EditForm}

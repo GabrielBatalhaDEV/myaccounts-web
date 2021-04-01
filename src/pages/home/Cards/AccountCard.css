@@ -100,3 +100,11 @@
 p{
     overflow-wrap: break-word;
 }
+
+.btn-edit{
+    background-color: var(--color-button-edit);
+}
+
+.btn-edit:hover{
+    background-color: var(--color-button-edit-hover);
+}

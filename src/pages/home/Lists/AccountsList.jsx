@@ -1,4 +1,5 @@
 import React from 'react'
+import { plus } from '../../../assets'
 import { AccountCard } from '../Cards/AccountCard'
 
 import './AccountList.css'
@@ -11,7 +12,7 @@ function AccountsList(props) {
                 <a style={{
                     color:'var(--color-button-letters)',
                     textDecoration: 'none',
-            }} href="/create">+</a>
+            }} className="btn-save" href="/create"><img src={plus} alt="Criar" width="16" height="16" /></a>
                 
             </div>
             <div className="AccountList__List">

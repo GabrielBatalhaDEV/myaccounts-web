@@ -5,11 +5,9 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
-    Redirect,
-
 } from "react-router-dom";
 import { CreateAccountContainer } from './pages/create/CreateAccountContainer';
+import { EditAccountContainer } from './pages/edit/EditAccountContainer';
 
 
 
@@ -20,8 +18,8 @@ function App() {
         <Router>
             <Switch>
                 <Route path="/create" component={CreateAccountContainer}></Route>
+                <Route path="/edit" component={EditAccountContainer}></Route>
                 <Route path="/" component={AccountsContainer}></Route>
-                
             </Switch>
 
         </Router>

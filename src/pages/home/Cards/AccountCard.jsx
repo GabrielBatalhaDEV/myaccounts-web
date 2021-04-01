@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
-import { btn_delete_card__16px } from '../../../assets/index'
 import { deleteAccount } from '../../../components/Requests/accountsApi'
+import {x, edit} from '../../../assets/index'
 
 
 
@@ -18,18 +18,19 @@ function AccountCard(props) {
             {show ?
                 (
                     <div className="account-card__open">
-                        
+
                         <div className="account-card__open_header">
-                        <h2>{props.title}</h2>
+                            <h2>{props.title}</h2>
                         </div>
-                        
+
                         <div className="account-card__open_body">
-                                <p>User: {props.username}</p>
-                                <p>Password: {props.password}</p>
-                                <p>Email: {props.email}</p>
-                        </div>  
+                            <p>User: {props.username}</p>
+                            <p>Password: {props.password}</p>
+                            <p>Email: {props.email}</p>
+                        </div>
                         <div className="account-card__open_button">
-                                <p>button</p>
+                            <a href="/edit" className="btn-edit"><img src={edit} alt="editar" width="16" height="16"/></a>
+                            <button className="btn-back"><img src={x} alt="deletar" height="16" width="16"/></button>
                         </div>
                     </div>
 
@@ -42,10 +43,11 @@ function AccountCard(props) {
                         <p className="account-card__close_id">
                             #{props._id}
                         </p>
-
                     </div>
 
-                )}
+                )
+            }
+
         </div>
     )
 }

@@ -16,3 +16,10 @@ header{
     text-decoration: none;
 }
 
+button,a {
+    padding: 7px 15px; 
+    color: var(--color-button-letters);
+    border: solid 3px black;
+    border-radius: 15px;
+    cursor: pointer;
+}

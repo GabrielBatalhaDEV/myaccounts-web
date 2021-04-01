@@ -1,8 +1,18 @@
-import btn_delete_card__16px from './btn_delete_card__16px.svg'
-import logo_myaccounts from './logo-myaccounts.svg'
+import arrow from './arrow.svg'
+import x from './x.svg'
+import edit from './edit.svg'
+import check from './check.svg'
+import plus from './plus.svg'
+
+
+
+
 
 
 export {
-    btn_delete_card__16px,
-    logo_myaccounts
+    arrow,
+    edit,
+    x,
+    check,
+    plus
 }
