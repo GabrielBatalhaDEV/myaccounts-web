@@ -21,7 +21,6 @@ function App() {
                 <Route path="/edit/:id" component={EditAccountContainer}></Route>
                 <Route path="/" component={AccountsContainer}></Route>
             </Switch>
-
         </Router>
     )
     
