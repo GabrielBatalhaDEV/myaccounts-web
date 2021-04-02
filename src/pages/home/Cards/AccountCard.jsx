@@ -1,11 +1,10 @@
 
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import { deleteAccount } from '../../../components/Requests/accountsApi'
 import {x, edit} from '../../../assets/index'
 
-
-
 import './AccountCard.css'
+import { Link } from 'react-router-dom'
 function AccountCard(props) {
     const [show, setShow] = useState(false)
 
@@ -13,6 +12,8 @@ function AccountCard(props) {
         setShow(!show)
     }
 
+    const {_id, title, username, password, email} = props
+    console.log(username);
     return (
         <div className="account-card" onClick={changeCard}>
             {show ?
@@ -20,17 +21,21 @@ function AccountCard(props) {
                     <div className="account-card__open">
 
                         <div className="account-card__open_header">
-                            <h2>{props.title}</h2>
+                            <h2>{title}</h2>
                         </div>
 
                         <div className="account-card__open_body">
-                            <p>User: {props.username}</p>
-                            <p>Password: {props.password}</p>
-                            <p>Email: {props.email}</p>
+                            {username && <p>User: {username}</p>}
+                            {password &&<p>Password: {password}</p>}
+                            {email && <p>Email: {email}</p>}
                         </div>
                         <div className="account-card__open_button">
-                            <a href="/edit" className="btn-edit"><img src={edit} alt="editar" width="16" height="16"/></a>
-                            <button className="btn-back"><img src={x} alt="deletar" height="16" width="16"/></button>
+                            <Link to={`/edit/${_id}`} className="btn-edit"><img src={edit} alt="editar" width="16" height="16"/></Link>
+                            <button className="btn-back" onClick={()=>{
+                                deleteAccount(_id).then(props.refresh())
+                            }}>
+                                <img src={x} alt="deletar" height="16" width="16" />
+                                </button>
                         </div>
                     </div>
 
@@ -41,7 +46,7 @@ function AccountCard(props) {
                         <h2>{props.title}</h2>
                         <span className="account-card__close_underline"></span>
                         <p className="account-card__close_id">
-                            #{props._id}
+                            #{_id}
                         </p>
                     </div>
 

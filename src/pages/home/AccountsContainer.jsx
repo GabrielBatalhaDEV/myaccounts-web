@@ -4,7 +4,6 @@ import { fetchAccounts } from '../../components/Requests/accountsApi'
 import "./AccountContainer.css"
 import { AccountForm } from './Forms/SearchForm'
 import { AccountsList } from './Lists/AccountsList'
-{}
 
 function AccountsContainer(){
     const [accounts, setAccounts] = useState([])
@@ -18,9 +17,13 @@ function AccountsContainer(){
         [],
     )
 
-    function refreshList(){
-        setRefresh(!refresh)
-    }
+    const Refresh = useCallback(
+        ()=>{
+            setRefresh(!refresh)
+        },
+        [refresh]
+    )
+    
 
     useEffect(() =>{
        fetchAccounts(title)
@@ -32,7 +35,7 @@ function AccountsContainer(){
     return (
     <div className="account-container">
         <AccountForm evtSearch={Search} ></AccountForm>
-        <AccountsList accounts={accounts} evtRefresh={()=>refreshList()}></AccountsList>
+        <AccountsList accounts={accounts} refresh={()=>Refresh()}></AccountsList>
     </div>)
 }
 

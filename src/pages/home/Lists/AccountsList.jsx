@@ -16,8 +16,7 @@ function AccountsList(props) {
                 
             </div>
             <div className="AccountList__List">
-                {props.accounts.map(account => <AccountCard key={account._id} {...account} 
-                evtRefresh={props.evtRefresh}></AccountCard>)}
+                {props.accounts.map(account => <AccountCard key={account._id} {...account} refresh={props.refresh} ></AccountCard>)}
             </div>
         </div>
     )

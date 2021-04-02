@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './app.css'
 import { AccountsContainer } from './pages/home/AccountsContainer'
 import {
@@ -18,7 +18,7 @@ function App() {
         <Router>
             <Switch>
                 <Route path="/create" component={CreateAccountContainer}></Route>
-                <Route path="/edit" component={EditAccountContainer}></Route>
+                <Route path="/edit/:id" component={EditAccountContainer}></Route>
                 <Route path="/" component={AccountsContainer}></Route>
             </Switch>
 
